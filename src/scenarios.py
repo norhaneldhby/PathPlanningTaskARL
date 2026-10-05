@@ -136,6 +136,39 @@ _SCENARIOS: Dict[str, Tuple[List[Cone], CarPose]] = {
         [Cone(x=0.0, y=2.0, color=0)],
         CarPose(x=0.0, y=0.0, yaw=1.8),
     ),
+
+    # ---- Part 2: three cones on one side ----
+
+    # 3 blue cones on the inside of a left-hand curve (no yellow visible).
+    "21": (
+        [
+            Cone(x=1.0, y=1.6, color=1),
+            Cone(x=2.8, y=2.2, color=1),
+            Cone(x=4.0, y=3.6, color=1),
+        ],
+        CarPose(x=0.0, y=0.0, yaw=0.2),
+    ),
+
+    # 3 yellow cones on the inside of a right-hand curve (no blue visible).
+    "22": (
+        [
+            Cone(x=1.6, y=1.0, color=0),
+            Cone(x=2.2, y=2.8, color=0),
+            Cone(x=3.8, y=3.8, color=0),
+        ],
+        CarPose(x=0.0, y=0.0, yaw=1.3),
+    ),
+
+    # 3 blue cones on a left-hand curve, only 1 yellow cone visible (asymmetric).
+    "23": (
+        [
+            Cone(x=1.0, y=2.0, color=1),
+            Cone(x=3.0, y=2.6, color=1),
+            Cone(x=4.3, y=4.0, color=1),
+            Cone(x=2.0, y=0.3, color=0),
+        ],
+        CarPose(x=0.0, y=0.0, yaw=0.3),
+    ),
 }
 
 
